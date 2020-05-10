@@ -1,0 +1,26 @@
+<div class="container home-bg ">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-sm-11 mx-auto">
+            <section class="card md-5 mt-5 bg-dark">
+                <header class="card-header border-0 text-white font-weight-bold">
+                    <h5><i class="fa fa-shopping-cart"></i> Shopping cart</h5>
+                </header>
+                <div class="input-group mt-3 ml-4">
+                </div>
+                <div class="table-responsive px-4 py-3">
+                    <div class="pre-scrollable">
+
+                        <ul class="list-group" *ngFor="let song of cart">
+                            <li class="list-group-item list-group-item-action text-white py-2" [hidden]="!song?.title">
+                                {{song.title}}<button class="btn btn-danger btn-sm  float-right"
+                                    (click)='deleteItem(song.id)'>Delete</button>
+                            </li>
+                        </ul>
+                        <h5 class="text-white" *ngIf="!cart.length">No Song Found In Cart</h5>
+                    </div>
+                </div>
+                <button class="btn btn-add-cart ml-3 mb-3" [routerLink]="['/songs']"> GO BACK</button>
+            </section>
+        </div>
+    </div>
+</div>

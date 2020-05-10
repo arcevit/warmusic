@@ -1,0 +1,31 @@
+<div class="container home-bg">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-sm-11 mx-auto">
+            <section class="card md-5 mt-4 bg-dark">
+                <header class="card-header border-0 text-white font-weight-bold">
+                    <h5><i class="fa fa-music mr-2"></i> Song List</h5>
+                </header>
+                <div class="input-group ml-4">
+                    <div class='form-group has-search mb-0'>
+                        <span class='fa fa-search form-control-feedback'></span>
+                        <input [(ngModel)]="songFilter" type='search' class='form-control  rounded-pill'
+                            placeholder='Search' />
+                    </div>
+                </div>
+                <div class="table-responsive px-4 py-3">
+                    <div class="pre-scrollable">
+                        <ul class="list-group" *ngFor="let song of paginatedSongs">
+                            <li class="list-group-item list-group-item-action text-white py-2" [hidden]="!song?.title">
+                                {{song.title}}
+                                <button (click)='addToCart(song.id)' class="btn btn-add-cart btn-sm  float-right"
+                                    [disabled]='song.inCart'>{{song.inCart?'IN CART':'ADD TO CART'}}</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <app-pagination [numOfSongs]='filteredSongs.length' [pageNumbers]='pageNumbers'
+                    (setPage)='onSetPage($event)'></app-pagination>
+            </section>
+        </div>
+    </div>
+</div>

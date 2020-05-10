@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+      serif;
+  }
+  a{
+    cursor: pointer;
+  }
+  .has-search .form-control {
+    padding-left: 1.875rem;
+  }
+  
+  .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 1.75rem;
+    height: 2.375rem;
+    line-height: 1.695rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+  }
+  
+  .rounded-pill {
+    border-radius: 10px 10px 10px 10px;
+    height: 25px;
+  }
+  .brand-title >span {
+    color:rgb(240,122,86) ;
+  }
+
+  .nav-link{
+    font-size: larger;
+  }
+
+  
+  .nav-link:hover {
+    text-shadow: 0 0 20px rgb(250, 246, 246);
+  }
+  
+  .navbar-bg {
+    background-color: rgb(20, 21, 22);
+  }
+  
+
+  .home-bg{
+    background-color: rgb(33, 38, 43);
+    height: 37.2rem;
+  }
+  .list-group-item{background-color: rgb(43, 50, 56);
+  }
+  .list-group-item:hover{background-color: rgb(33, 38, 43);
+    }
+
+  .btn-add-cart{
+    background-color:rgb(73, 46, 192) ;
+    color: white;
+    max-width: 140px;
+  }
+
+  .btn-cart{
+    background-color:rgb(240,122,86) ;
+  }
+  .btn-cart:hover{
+    background-color:rgb(68, 49, 71) ;
+    color: white;
+  }
+.pre-scrollable{
+  min-height: 338px;
+}
+.view{
+  max-width: 700px;
+}
+.page-item page-ling{
+  height: 3px;
+}
